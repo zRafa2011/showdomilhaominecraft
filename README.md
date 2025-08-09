@@ -91,7 +91,7 @@ Use /adminshow para ativar modo admin, /resposta para responder perguntas, e /el
 show.admin — Permite usar /eliminar e ter acesso ao modo admin.
 
 ## Contato
-Desenvolvido por Rafael2011.
+Desenvolvido por **Rafael2011**.
 
 Nota
 Se encontrar bugs ou tiver sugestões, entre em contato através do meu discord: Rafael_2011!

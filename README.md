@@ -33,11 +33,12 @@ O arquivo `config.yml` permite personalizar:
 - Lista de perguntas (`questions`).
 
 ### Exemplo de pergunta no `config.yml`:
-
-- question: "Qual é o mob que explode no Minecraft?"
--  options:
--    A: "Creeper"
--    B: "Enderman"
--    C: "Zombie"
--    D: "Ghast"
--  answer: "A"
+```
+ question: "Qual é o mob que explode no Minecraft?"
+  options:
+    A: "Creeper"
+    B: "Enderman"
+    C: "Zombie"
+    D: "Ghast"
+  answer: "A"
+```

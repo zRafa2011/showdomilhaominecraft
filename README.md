@@ -16,26 +16,6 @@ O jogo apresenta perguntas de múltipla escolha, elimina automaticamente quem er
 
 ---
 
-## 📂 Estrutura de Pastas
-ShowDoMilhao/
-│
-├── src/
-│ └── main/
-│ ├── java/com/rafael2011/show/
-│ │ ├── ShowDoMilhao.java
-│ │ ├── commands/
-│ │ │ ├── StartShowCommand.java
-│ │ │ └── RespostaCommand.java
-│ │ └── game/
-│ │ ├── GameManager.java
-│ │ └── Question.java
-│ │
-│ └── resources/
-│ ├── plugin.yml
-│ └── config.yml
-
----
-
 ## ⚙️ Comandos
 | Comando      | Permissão    | Descrição |
 |--------------|-------------|-----------|

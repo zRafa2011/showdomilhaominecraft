@@ -17,3 +17,47 @@ O jogo apresenta perguntas de múltipla escolha, elimina automaticamente quem er
 ---
 
 ## 📂 Estrutura de Pastas
+ShowDoMilhao/
+│
+├── src/
+│ └── main/
+│ ├── java/com/rafael2011/show/
+│ │ ├── ShowDoMilhao.java
+│ │ ├── commands/
+│ │ │ ├── StartShowCommand.java
+│ │ │ └── RespostaCommand.java
+│ │ └── game/
+│ │ ├── GameManager.java
+│ │ └── Question.java
+│ │
+│ └── resources/
+│ ├── plugin.yml
+│ └── config.yml
+
+---
+
+## ⚙️ Comandos
+| Comando      | Permissão    | Descrição |
+|--------------|-------------|-----------|
+| `/startshow` | `show.admin` | Inicia o evento do Show do Milhão. |
+| `/resposta <letra>` | *(todos)* | Responde à pergunta atual (A, B, C ou D). |
+
+---
+
+## 📄 Configuração
+O arquivo `config.yml` permite personalizar:
+- Localização do palco (`spawn-location`).
+- Tempo entre perguntas (`time-between-questions`).
+- Prêmios (`reward`).
+- Mensagens (`messages`).
+- Lista de perguntas (`questions`).
+
+### Exemplo de pergunta no `config.yml`:
+yaml
+- question: "Qual é o mob que explode no Minecraft?"
+  options:
+    A: "Creeper"
+    B: "Enderman"
+    C: "Zombie"
+    D: "Ghast"
+  answer: "A"

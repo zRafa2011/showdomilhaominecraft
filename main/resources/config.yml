@@ -1,0 +1,54 @@
+spawn-location:
+  world: "world"
+  x: 265
+  y: -60
+  z: 306
+  yaw: 0
+  pitch: 0
+
+time-between-questions: 15
+
+reward:
+  type: "DIAMOND"
+  amount: 1
+
+messages:
+  prefix: "&6[Show do Milhão] &f"
+  start: "&aO Show do Milhão começou!"
+  next-question: "&ePróxima pergunta em &c%seconds% &esegundos!"
+  correct: "&aVocê acertou!"
+  wrong: "&cVocê errou e foi eliminado!"
+  winner: "&6Parabéns %player%, você venceu o Show do Milhão!"
+  no-winner: "&cO evento terminou sem vencedores."
+  eliminated: "&cVocê foi eliminado do Show do Milhão!"
+
+
+questions:
+  - question: "Qual é o mob que explode no Minecraft?"
+    options:
+      A: "Creeper"
+      B: "Enderman"
+      C: "Zombie"
+      D: "Ghast"
+    answer: "A"
+
+  - question: "Qual minério é azul?"
+    options:
+      A: "Ferro"
+      B: "Diamante"
+      C: "Ouro"
+      D: "Lápis-Lazúli"
+    answer: "D"
+scoreboard:
+  title: "&6&lSHOW DO MILHÃO"
+  lines_player:
+    - ""
+    - "Pergunta:"
+    - "%pergunta%"
+    - ""
+    - "seuip.com"
+  lines_admin:
+    - ""
+    - "&cMODO ADMIN"
+    - ""
+    - "seuip.com"

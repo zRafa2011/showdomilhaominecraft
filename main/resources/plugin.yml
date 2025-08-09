@@ -1,0 +1,24 @@
+name: ShowdoMilhao
+version: '1.0-SNAPSHOT'
+main: com.rafael2011.show.ShowDoMilhao
+api-version: '1.21'
+authors: [ Rafael2011 ]
+website: rafael2011.com
+commands:
+  startshow:
+    description: Inicia o Show do Milhão
+    usage: /startshow
+    permission: show.admin
+  resposta:
+    description: Responde à pergunta atual
+    usage: /resposta <letra>
+  adminshow:
+    description: Alterna o modo admin
+    usage: /adminshow
+    permission: show.admin
+  Eliminar:
+    usage: /eliminar
+    permission: show.admin
+permissions:
+  show.admin:
+    default: op

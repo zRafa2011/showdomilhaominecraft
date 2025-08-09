@@ -1,44 +1,97 @@
-# 🎯 Show do Milhão - Minecraft Plugin
+# ShowDoMilhao - Plugin Minecraft
 
-Um plugin de evento inspirado no programa de TV **Show do Milhão**, adaptado para servidores Minecraft (Spigot/Paper 1.21+).  
-O jogo apresenta perguntas de múltipla escolha, elimina automaticamente quem errar e premia o vencedor no final.
-
----
-
-## 📌 Funcionalidades
-- Perguntas de múltipla escolha configuráveis no `config.yml`.
-- Respostas clicáveis no chat.
-- Eliminação automática de jogadores que erram.
-- Teleporte automático para o palco no início do evento.
-- Premiação configurável (itens, quantidade).
-- Mensagens personalizáveis.
-- Sistema de rodadas até restar um vencedor.
+Plugin de evento inspirado no famoso programa "Show do Milhão", para servidores Minecraft Spigot/Paper.
 
 ---
 
-## ⚙️ Comandos
-| Comando      | Permissão    | Descrição |
-|--------------|-------------|-----------|
-| `/startshow` | `show.admin` | Inicia o evento do Show do Milhão. |
-| `/resposta <letra>` | *(todos)* | Responde à pergunta atual (A, B, C ou D). |
+## Funcionalidades
+
+- Evento com perguntas de múltipla escolha.
+- Jogadores respondem via comando `/resposta <letra>`.
+- Pergunta aparece na **bossbar** com contagem regressiva visual.
+- Sistema de **scoreboard** customizável por config, diferente para admins e jogadores normais.
+- Comando `/adminshow` para alternar modo admin, que altera a scoreboard.
+- Comando `/eliminar <jogador>` para eliminar jogadores manualmente (perm admin).
+- Premiação configurável para o vencedor.
+- Teletransporte automático ao início para local definido na config.
+- Mensagens customizáveis via `config.yml`.
 
 ---
 
-## 📄 Configuração
-O arquivo `config.yml` permite personalizar:
-- Localização do palco (`spawn-location`).
-- Tempo entre perguntas (`time-between-questions`).
-- Prêmios (`reward`).
-- Mensagens (`messages`).
-- Lista de perguntas (`questions`).
+## Comandos
 
-### Exemplo de pergunta no `config.yml`:
+- `/resposta <letra>` — Responde a pergunta atual (letras A, B, C ou D).
+- `/adminshow` — Alterna modo admin, altera scoreboard.
+- `/eliminar <jogador>` — Elimina um jogador do evento (requer permissão `show.admin`).
+
+---
+
+## Configuração (config.yml)
+
+Exemplo simplificado:
+
 ```
- question: "Qual é o mob que explode no Minecraft?"
-  options:
-    A: "Creeper"
-    B: "Enderman"
-    C: "Zombie"
-    D: "Ghast"
-  answer: "A"
+spawn-location:
+  world: world
+  x: 100.5
+  y: 65.0
+  z: 100.5
+  yaw: 0.0
+  pitch: 0.0
+
+time-between-questions: 30
+
+reward:
+  type: DIAMOND
+  amount: 5
+
+messages:
+  prefix: "[Show do Milhão] "
+  start: "O evento Show do Milhão começou! Boa sorte!"
+  correct: "&aResposta correta!"
+  eliminated: "&cVocê foi eliminado do Show do Milhão!"
+  winner: "&6Parabéns %player%, você venceu o Show do Milhão!"
+  no-winner: "Ninguém venceu o Show do Milhão!"
+  
+scoreboard:
+  title: "&6SHOW DO MILHÃO"
+  lines_player:
+    - " "
+    - "Pergunta:"
+    - "%pergunta%"
+    - " "
+    - "seuip.com"
+  lines_admin:
+    - " "
+    - "&cMODO ADMIN"
+    - " "
+    - "seuip.com"
+
+questions:
+  - question: "Qual é a capital do Brasil?"
+    options:
+      A: "Rio de Janeiro"
+      B: "Brasília"
+      C: "São Paulo"
+      D: "Salvador"
+    answer: "B"
 ```
+## Instalação
+Compile o plugin com Maven/Gradle ou seu IDE.
+
+Coloque o .jar na pasta plugins do seu servidor Spigot/Paper.
+
+Edite o config.yml conforme suas preferências.
+
+Reinicie o servidor.
+
+Use /adminshow para ativar modo admin, /resposta para responder perguntas, e /eliminar para eliminar jogadores (opcional).
+
+## Permissões
+show.admin — Permite usar /eliminar e ter acesso ao modo admin.
+
+## Contato
+Desenvolvido por Rafael2011.
+
+Nota
+Se encontrar bugs ou tiver sugestões, entre em contato através do meu discord: Rafael_2011!

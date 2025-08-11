@@ -30,7 +30,7 @@ Plugin de evento inspirado no famoso programa "Show do Milhão", para servidores
 
 Exemplo simplificado:
 
-```
+```yaml
 spawn-location:
   world: world
   x: 100.5
@@ -75,23 +75,39 @@ questions:
       C: "São Paulo"
       D: "Salvador"
     answer: "B"
-```
+````
+
+---
+
 ## Instalação
-Compile o plugin com Maven/Gradle ou seu IDE.
 
-Coloque o .jar na pasta plugins do seu servidor Spigot/Paper.
+1. Compile o plugin com Maven/Gradle ou seu IDE.
+2. Coloque o `.jar` na pasta `plugins` do seu servidor Spigot/Paper.
+3. Edite o `config.yml` conforme suas preferências.
+4. Reinicie o servidor.
+5. Use `/adminshow` para ativar modo admin, `/resposta` para responder perguntas, e `/eliminar` para eliminar jogadores (opcional).
 
-Edite o config.yml conforme suas preferências.
-
-Reinicie o servidor.
-
-Use /adminshow para ativar modo admin, /resposta para responder perguntas, e /eliminar para eliminar jogadores (opcional).
+---
 
 ## Permissões
-show.admin — Permite usar /eliminar e ter acesso ao modo admin.
+
+* `show.admin` — Permite usar `/eliminar` e ter acesso ao modo admin.
+
+---
 
 ## Contato
-Desenvolvido por **Rafael2011**.
 
-Nota
-Se encontrar bugs ou tiver sugestões, entre em contato através do meu discord: Rafael_2011!
+Desenvolvido por Rafael_2011.
+
+---
+
+## Nota
+
+Se encontrar bugs ou tiver sugestões, entre em contato atraves do discord Rafael_2011!
+
+```
+
+---
+
+Quer que eu te gere o arquivo pronto para você só salvar?
+```
